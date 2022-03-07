@@ -1,0 +1,70 @@
+.pro-Container {
+  display: grid;
+  width: 90%;
+  margin: auto;
+  grid-template-columns: repeat(4, 25%);
+  grid-gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.products {
+  justify-content: center;
+  border: 0.5px solid cadetblue;
+  border-radius: 5px;
+}
+
+.products > div {
+  margin-bottom: 10px;
+}
+.ratings > div {
+  font-weight: 700;
+}
+.pagination {
+  display: flex;
+  margin: auto;
+  padding: 30px;
+  width: 50%;
+  justify-content: space-between;
+}
+a {
+  background-color: coral;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  text-decoration: none;
+}
+#addToCart {
+  background-color: cadetblue;
+  width: 50%;
+  cursor: pointer;
+  margin: auto;
+  border-radius: 10px;
+}
+#addToCart:hover {
+  background-color: bisque;
+  transition: 0.5s;
+  opacity: 0.8;
+  color: red;
+  transform: scaleX(2);
+}
+.quantityPro {
+  font-weight: bold;
+}
+.plusMin {
+  padding: 5px;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 5px;
+  background-color: aquamarine;
+  cursor: pointer;
+}
+.Del {
+  width: fit-content;
+  padding: 5px;
+  background-color: lightsalmon;
+  margin: auto;
+  cursor: pointer;
+}
+.btns {
+  margin-top: 30px;
+}

@@ -1,0 +1,12 @@
+.formUser {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: auto;
+}
+.formUser > input {
+  margin-top: 10px;
+}
+.formUser > textarea {
+  margin-top: 10px;
+}

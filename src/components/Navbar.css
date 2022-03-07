@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  padding: 15px;
+  background-color: aquamarine;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation > h1 {
+  font-size: xx-large;
+  color: cornflowerblue;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.navigation ul li {
+  margin-right: 10px;
+}
+
+#gthome :hover {
+  background-color: crimson;
+}
+#gtcart :hover {
+  background-color: crimson;
+}
+.tag {
+  cursor: pointer;
+}
