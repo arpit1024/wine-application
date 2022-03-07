@@ -1,9 +1,10 @@
 import "./home.css";
 import React, { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 export const Cart = () => {
   const [products, setProducts] = useState([]);
+  const navigate = useNavigate();
   if (localStorage.getItem("saved-wine-Pro") == null) {
     localStorage.setItem("saved-wine-Pro", JSON.stringify([]));
   }
@@ -52,10 +53,17 @@ export const Cart = () => {
       "Products is being saved to your cart you can do shopping later now!"
     );
   };
+  const checkout = () => {
+    if (JSON.parse(localStorage.getItem("saved-wine-Pro")).length == 0) {
+      alert("please save the products Or Cart is Empty!");
+    } else {
+      navigate("/checkout");
+    }
+  };
   return (
     <>
       <div className="btns">
-        <Link to={"/checkout"}>Check Out</Link> &nbsp;
+        <button onClick={checkout}>Check Out</button> &nbsp;
         <button onClick={saveProds}>
           Save Products(OR EMPTY) for Later Checkout
         </button>
