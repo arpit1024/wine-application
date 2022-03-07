@@ -5,20 +5,16 @@ export const Pagination = ({ postPerPage, totalPosts, paginate }) => {
   if (+page > 5) {
     startPage = +page - 5;
     endPage = +page + 5;
-    if (startPage >= 90) {
-      startPage = 90;
-      endPage = 100;
+    if (endPage > Math.ceil(totalPosts / postPerPage)) {
+      endPage = Math.ceil(totalPosts / postPerPage);
+      startPage = endPage - 10;
     }
   } else {
     startPage = 1;
     endPage = 10;
   }
   const pageNumbers = [];
-  for (
-    let i = startPage;
-    i <= endPage && Math.ceil(totalPosts / postPerPage);
-    i++
-  ) {
+  for (let i = startPage; i <= endPage; i++) {
     pageNumbers.push(i);
   }
   //   for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
@@ -35,6 +31,7 @@ export const Pagination = ({ postPerPage, totalPosts, paginate }) => {
               setPage(n);
               paginate(n);
             }}
+            className="btns"
           >
             {n}
           </button>
