@@ -130,11 +130,13 @@ export const Home = () => {
         <option value="sparkling">Sparkling</option>
         <option value="dessert">Dessert</option>
       </select>
+      &nbsp; &nbsp;
       <select name="" id="" onChange={filterByRating} className="input_bar">
         <option value="">Filter By Ratings</option>
         <option value="hTol">High To Low</option>
         <option value="lToh">Low To High</option>
       </select>
+      &nbsp; &nbsp;
       <select name="" id="" onChange={filterByReview} className="input_bar">
         <option value="">Filter By Reviews</option>
         <option value="hTolR">High To Low</option>

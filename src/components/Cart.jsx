@@ -62,7 +62,7 @@ export const Cart = () => {
   };
   return (
     <>
-      <div className="btns">
+      <div className="checkout-save">
         <button onClick={checkout}>Check Out</button> &nbsp;
         <button onClick={saveProds}>
           Save Products(OR EMPTY) for Later Checkout

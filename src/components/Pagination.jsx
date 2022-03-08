@@ -32,6 +32,8 @@ export const Pagination = ({ postPerPage, totalPosts, paginate }) => {
               paginate(n);
             }}
             className="btns"
+            disabled={n == page ? true : false}
+            id={n == page ? "disabled" : null}
           >
             {n}
           </button>
